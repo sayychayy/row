@@ -26,47 +26,47 @@
   /* Fully opaque so each page's body background can't bleed through
      and tint the bar a different color. Matches the dashboard's base
      dark background so the bar feels continuous with the page chrome. */
-  background: #0a0a0b;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: #06000c;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.30);
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
 }
 .topbar-pill {
   flex: 1 1 0; min-width: 0;
   display: inline-flex; align-items: center; gap: 8px;
   padding: 8px 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(139, 92, 246, 0.09);
+  border: 1px solid rgba(139, 92, 246, 0.24);
   border-radius: 11px;
   text-decoration: none;
-  color: #FAFAFA;
+  color: #e8d5ff;
   -webkit-tap-highlight-color: transparent;
   transition: background 0.15s, border-color 0.15s;
 }
-.topbar-pill:hover { background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 255, 255, 0.10); }
+.topbar-pill:hover { background: rgba(139, 92, 246, 0.16); border-color: rgba(139, 92, 246, 0.42); }
 .topbar-pill-dot {
   width: 7px; height: 7px; border-radius: 50%;
-  background: #6ee7b7; flex-shrink: 0;
+  background: #a78bfa; flex-shrink: 0;
 }
-.topbar-pill.warn .topbar-pill-dot { background: #fbbf24; }
+.topbar-pill.warn .topbar-pill-dot { background: #e879f9; }
 .topbar-pill.miss .topbar-pill-dot {
-  background: #ff8a8a;
+  background: #f472b6;
   animation: topbar-miss-pulse 1.6s ease-in-out infinite;
 }
 @keyframes topbar-miss-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5); }
-  50%      { box-shadow: 0 0 0 5px rgba(239, 68, 68, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(244, 114, 182, 0.55); }
+  50%      { box-shadow: 0 0 0 5px rgba(244, 114, 182, 0); }
 }
 .topbar-pill-label {
   font-size: 10px; font-weight: 700;
   letter-spacing: 0.14em; text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(196, 160, 255, 0.80);
   flex-shrink: 0;
 }
 .topbar-pill-count {
   margin-left: auto;
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   font-size: 12px; font-weight: 700;
-  color: #FAFAFA;
+  color: #e8d5ff;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
@@ -78,23 +78,23 @@
   flex: 1; min-width: 0;
   display: inline-flex; align-items: center; gap: 8px;
   padding: 8px 12px;
-  background: rgba(125, 211, 252, 0.07);
-  border: 1px solid rgba(125, 211, 252, 0.14);
+  background: rgba(139, 92, 246, 0.09);
+  border: 1px solid rgba(139, 92, 246, 0.24);
   border-right: none;
   border-radius: 11px 0 0 11px;
   text-decoration: none;
-  color: #FAFAFA;
+  color: #e8d5ff;
   -webkit-tap-highlight-color: transparent;
   transition: background 0.15s;
 }
-.topbar-water-pill:hover { background: rgba(125, 211, 252, 0.12); }
-.topbar-water-pill .topbar-pill-dot { background: #7DD3FC; }
+.topbar-water-pill:hover { background: rgba(139, 92, 246, 0.16); }
+.topbar-water-pill .topbar-pill-dot { background: #c084fc; }
 .topbar-water-add {
   flex: 0 0 auto;
   width: 38px;
-  border: 1px solid rgba(125, 211, 252, 0.14);
-  background: linear-gradient(180deg, rgba(125, 211, 252, 0.22), rgba(110, 231, 183, 0.22));
-  color: #FFFFFF;
+  border: 1px solid rgba(139, 92, 246, 0.30);
+  background: linear-gradient(180deg, rgba(167, 139, 250, 0.32), rgba(139, 92, 246, 0.22));
+  color: #f0e6ff;
   font-family: inherit; font-size: 17px; font-weight: 700;
   cursor: pointer;
   border-radius: 0 11px 11px 0;
@@ -102,11 +102,11 @@
   transition: background 0.15s, transform 0.10s;
 }
 .topbar-water-add:hover {
-  background: linear-gradient(180deg, rgba(125, 211, 252, 0.34), rgba(110, 231, 183, 0.34));
+  background: linear-gradient(180deg, rgba(167, 139, 250, 0.50), rgba(139, 92, 246, 0.38));
 }
 .topbar-water-add:active { transform: scale(0.94); }
 .topbar-water-add.flash {
-  background: linear-gradient(180deg, rgba(125, 211, 252, 0.65), rgba(110, 231, 183, 0.65));
+  background: linear-gradient(180deg, rgba(192, 132, 252, 0.72), rgba(139, 92, 246, 0.60));
 }
 
 @media (max-width: 480px) {

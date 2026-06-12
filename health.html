@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#050506">
+<meta name="theme-color" content="#06000c">
 <meta name="color-scheme" content="dark">
 <title>Daily Stack — Customizable Template</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -11,28 +11,28 @@
 <script src="topbar.js" defer></script>
 <style>
 :root {
-  --bg: #050506;
-  --bg-card: rgba(255, 255, 255, 0.04);
-  --bg-secondary: rgba(255, 255, 255, 0.035);
-  --bg-input: rgba(0, 0, 0, 0.28);
-  --bg-input-focus: rgba(0, 0, 0, 0.36);
-  --bg-dropdown: rgba(15, 15, 18, 0.96);
+  --bg: #06000c;
+  --bg-card: rgba(139, 92, 246, 0.07);
+  --bg-secondary: rgba(139, 92, 246, 0.05);
+  --bg-input: rgba(6, 0, 12, 0.55);
+  --bg-input-focus: rgba(6, 0, 12, 0.70);
+  --bg-dropdown: rgba(15, 0, 30, 0.97);
 
-  --border: rgba(255, 255, 255, 0.06);
-  --border-soft: rgba(255, 255, 255, 0.04);
-  --border-strong: rgba(255, 255, 255, 0.12);
+  --border: rgba(139, 92, 246, 0.20);
+  --border-soft: rgba(139, 92, 246, 0.12);
+  --border-strong: rgba(139, 92, 246, 0.35);
 
-  --text-primary: #FAFAFA;
-  --text-secondary: #B8B6B0;
-  --text-tertiary: #76746E;
-  --text-quaternary: #4D4B47;
+  --text-primary: #f0e6ff;
+  --text-secondary: rgba(210, 185, 255, 0.72);
+  --text-tertiary: rgba(170, 140, 220, 0.52);
+  --text-quaternary: rgba(130, 100, 190, 0.40);
 
-  --accent: #1D9E75;
-  --accent-glow: rgba(29, 158, 117, 0.35);
-  --warning: #FF8A4D;
-  --warning-bg: rgba(163, 45, 45, 0.10);
-  --tag-stack: #D8AB30;
-  --tag-stack-bg: rgba(216, 171, 48, 0.15);
+  --accent: #8b5cf6;
+  --accent-glow: rgba(139, 92, 246, 0.45);
+  --warning: #e879f9;
+  --warning-bg: rgba(232, 121, 249, 0.10);
+  --tag-stack: #c084fc;
+  --tag-stack-bg: rgba(192, 132, 252, 0.15);
 
   --font: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -53,15 +53,15 @@ body { min-height: 100vh; position: relative; overflow-x: hidden; }
 body::before {
   content: ''; position: fixed; inset: 0;
   background:
-    radial-gradient(60% 50% at 82% 14%, rgba(224, 118, 88, 0.16) 0%, transparent 60%),
-    radial-gradient(50% 40% at 18% 90%, rgba(180, 180, 200, 0.06) 0%, transparent 60%);
+    radial-gradient(60% 50% at 72% 10%, rgba(139, 92, 246, 0.24) 0%, transparent 60%),
+    radial-gradient(50% 40% at 18% 88%, rgba(91, 33, 182, 0.16) 0%, transparent 60%);
   filter: blur(40px);
   pointer-events: none; z-index: 0;
   animation: drift 36s ease-in-out infinite alternate;
 }
 body::after {
   content: ''; position: fixed; inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.014) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(139,92,246,0.06) 1px, transparent 1px);
   background-size: 3px 3px;
   pointer-events: none; z-index: 1;
 }
@@ -120,9 +120,9 @@ main {
 }
 .stack-progress-fill {
   height: 100%; width: 0%;
-  background: #FFFFFF; border-radius: 999px;
+  background: #8b5cf6; border-radius: 999px;
   transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 10px rgba(139,92,246,0.50);
 }
 
 .stack-window { margin-bottom: 14px; }
